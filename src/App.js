@@ -60,7 +60,19 @@ function App() {
               value={name}
               onChange={(e) => filter(e.target.value)}
             />
-            {/* <div onClick={() => setData(foundDishes)}>Close</div> */}
+            <div
+              style={{
+                marginRight: "5%",
+                cursor: "pointer",
+                marginTop: "1%",
+              }}
+              onClick={() => {
+                setName("");
+                setData(foundDishes);
+              }}
+            >
+              Close
+            </div>
           </div>
 
           {data.map((ele, index) => (
